@@ -21,7 +21,7 @@ pipeline{
         }
         stage('deploy'){
             steps{
-                sciprt{
+                script{
                     sh """
                         echo "this is deploy stage"
                     """
