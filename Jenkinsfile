@@ -1,8 +1,8 @@
 pipeline{
     agent any
     stages{
-        stage('buold'){
-            stepts{
+        stage('build'){
+            steps{
                 script{
                     sh """"
                         echo " this is build stage"
@@ -12,14 +12,16 @@ pipeline{
 
         }
         stage('test'){
-            script{
-                sh """
-                    echo " this is test stage"
-                   """ 
+            steps{
+                script{
+                    sh """
+                        echo " this is test stage"
+                    """ 
+                }
             }
         }
         stage('deploy'){
-            stepts{
+            steps{
                 script{
                     sh """
                         echo "thid is depoy stage"
